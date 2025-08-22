@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Simple Currency Exchange</title>
+    <link rel="canonical" href="https://jitenderrathore15.github.io/currency-exchange/">
+    <meta name="description" content="Fast, clean currency converter hosted on GitHub Pages.">
+    <meta property="og:title" content="Simple Currency Exchange">
+    <meta property="og:description" content="Fast, clean currency converter hosted on GitHub Pages.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="social.png">
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://api.exchangerate.host">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo"></div>
+        <div class="name">Currency Exchange</div>
+      </div>
+      <a class="repo-link" href="https://github.com/jitenderrathore15/currency-exchange" target="_blank" rel="noopener">Repo</a>
+    </header>
+
+    <main class="wrap">
+      <section class="card convert">
+        <h1 class="title">Convert money</h1>
+        <div class="grid">
+          <div class="box">
+            <label class="label">Amount</label>
+            <input id="amount" class="input" type="number" min="0" step="0.01" value="100">
+          </div>
+          <div class="box">
+            <label class="label">From</label>
+            <select id="from" class="select"></select>
+          </div>
+          <div class="box">
+            <label class="label">To</label>
+            <select id="to" class="select"></select>
+          </div>
+        </div>
+        <div class="actions">
+          <button id="swap" class="btn">Swap</button>
+          <button id="convert" class="btn dark">Convert</button>
+        </div>
+        <div id="result" class="result"></div>
+        <div id="rateInfo" class="meta"></div>
+      </section>
+
+      <section class="card extras">
+        <h2 class="title small">Quick picks</h2>
+        <div class="chips" id="quick"></div>
+      </section>
+
+      <section class="card tracking">
+        <h2 class="title small">Traffic experiment</h2>
+        <div class="meta">Share links with UTM tags, e.g. <code>?utm_source=twitter&utm_campaign=launch</code>. Click “Copy link” below.</div>
+        <div class="actions">
+          <button id="copyLink" class="btn">Copy share link</button>
+          <span id="copied" class="meta hide">Copied</span>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <div>Hosted on GitHub Pages · <a href="https://jitenderrathore15.github.io/currency-exchange/" target="_blank" rel="noopener">https://jitenderrathore15.github.io/currency-exchange/</a></div>
+      <div id="footMeta"></div>
+    </footer>
+
+    <script>
+      // Optional: enable Plausible analytics (privacy-friendly)
+      // Create a site in Plausible with domain: jitenderrathore15.github.io
+      // Then uncomment the script below and set data-domain and src correctly.
+      // <script defer data-domain="jitenderrathore15.github.io" src="https://plausible.io/js/script.js"></script>
+    </script>
+
+    <!-- If you prefer GA4, paste your gtag snippet here. The app will auto-track button clicks if gtag/plausible is present. -->
+    <script src="app.js"></script>
+    <script src="track.js"></script>
+  </body>
+</html>
